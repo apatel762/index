@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Profile("local")
 @Component
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
-public class IssueSeeder implements CommandLineRunner {
+public class IssueMockData implements CommandLineRunner {
 
   private final IssueRepository issueRepository;
 
