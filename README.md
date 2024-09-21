@@ -1,2 +1,3 @@
-# index
-issue tracker app
+# Index
+
+An issue tracker app learning project.

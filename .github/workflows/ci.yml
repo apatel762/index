@@ -32,9 +32,9 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Verify
-        run: mvn verify
+        run: ./mvnw verify
         if: github.ref != 'master'  # feature branches only
 
       - name: Deploy
-        run: mvn deploy
+        run: ./mvnw deploy
         if: github.ref == 'master'
