@@ -33,8 +33,3 @@ jobs:
 
       - name: Verify
         run: ./mvnw verify
-        if: github.ref != 'master'  # feature branches only
-
-      - name: Deploy
-        run: ./mvnw deploy
-        if: github.ref == 'master'

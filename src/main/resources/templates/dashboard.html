@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome back, {{user}}</h1>
+    </header>
+    <main>
+        <h2>What's top of mind.</h2>
+        <hr>
+        {{#issues}}
+        <h3>{{summary}}</h3>
+        <h4>{{createdAt}}</h4>
+        <h4>{{author}}</h4>
+        <p>{{description}}</p>
+        <hr>
+        {{/issues}}
+    </main>
+    <footer/>
+</body>
+</html>
