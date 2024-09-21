@@ -22,6 +22,15 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
+      - name: Cache Maven repository
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}-${{ github.ref }}
+          restore-keys: |
+            ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+            ${{ runner.os }}-maven-
+
       - name: Verify
         run: mvn verify
         if: github.ref != 'master'  # feature branches only
